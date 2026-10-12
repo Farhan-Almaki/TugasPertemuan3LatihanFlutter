@@ -12,15 +12,16 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       home: Scaffold(
         body: Center(
-          child: ProductDetailTextWidget(),
+          child: RecipeSpacingWidget(),
         ),
       ),
     );
   }
 }
 
-class ProductDetailTextWidget extends StatelessWidget {
-  const ProductDetailTextWidget({super.key});
+// WIDGET HARI KE-3: Spacing (Modifikasi dari poin 5 Modul)
+class RecipeSpacingWidget extends StatelessWidget {
+  const RecipeSpacingWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,32 +30,33 @@ class ProductDetailTextWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Kategori: Makanan & Minuman',
+          'Daftar Bahan Utama',
           style: TextStyle(
-            fontSize: 16,
+            fontSize: 20,
           ),
         ),
+        SizedBox(height: 15),
         Text(
-          'Keripik Tempe Renyah',
-          style: TextStyle(
-            fontSize: 22,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        Text(
-          'Rp 15.000 / bungkus',
+          'T E M P E  O R E K',
           style: TextStyle(
             fontSize: 18,
-            fontWeight: FontWeight.w600,
-            color: Colors.green,
+            letterSpacing: 4,
           ),
         ),
+        SizedBox(height: 15),
         Text(
-          '* Stok terbatas hari ini',
+          'Kecap Manis Gurih',
           style: TextStyle(
-            fontSize: 14,
-            fontStyle: FontStyle.italic,
-            color: Colors.grey,
+            fontSize: 18,
+            wordSpacing: 8,
+          ),
+        ),
+        SizedBox(height: 15),
+        Text(
+          'Langkah 1:\nIris tempe tipis\nGoreng hingga krispi',
+          style: TextStyle(
+            fontSize: 16,
+            height: 1.8,
           ),
         ),
       ],
